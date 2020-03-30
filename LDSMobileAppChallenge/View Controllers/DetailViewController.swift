@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailNameLabel: UILabel!
     @IBOutlet weak var detailBirthdateLabel: UILabel!
@@ -17,11 +17,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailAffiliationLabel: UILabel!
     
     var individual : Individual?
-    let 
+    let INDIVIDUAL_IMAGE_LOADED_NOTIFICATION = Notification.Name(rawValue: NOTIFICATION_LOADED_IMAGE_KEY)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         createObservers()
         populateDetailData()
     }
@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
     // MARK: - Helper Methods
     
     func createObservers() {
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.reloadImage(notification:)), name: INDIVIDUAL_IMAGE_LOADED_NOTIFICATION, object: nil)
     }
     
     func populateDetailData() {
@@ -48,8 +48,14 @@ class DetailViewController: UIViewController {
         guard let individualImageData = individual.profileImage else { return }
         detailImageView.image = UIImage(data: individualImageData)
     }
-
     
+    // MARK: - ObjC Selectors
+    
+    @objc private func reloadImage(notification: NSNotification) {
+        DispatchQueue.main.async {
+            self.loadIndividualImage()
+        }
+    }
     
     // MARK: - Class methods
     
