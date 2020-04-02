@@ -23,6 +23,9 @@
 		1612FDAA242DAC5F00D4DB9E /* ImageCallbackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612FDA8242DAC5F00D4DB9E /* ImageCallbackProtocol.swift */; };
 		1612FDAB242DAC5F00D4DB9E /* CallbackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612FDA9242DAC5F00D4DB9E /* CallbackProtocol.swift */; };
 		16418C11242DBB01000EAD1C /* IndividualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16418C10242DBB01000EAD1C /* IndividualTableViewCell.swift */; };
+		16E4EC4224339A1E0020A878 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4EC4124339A1E0020A878 /* PersistenceService.swift */; };
+		16E4EC452433A0920020A878 /* IndividualEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4EC432433A0920020A878 /* IndividualEntity+CoreDataClass.swift */; };
+		16E4EC462433A0920020A878 /* IndividualEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4EC442433A0920020A878 /* IndividualEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		1612FDA8242DAC5F00D4DB9E /* ImageCallbackProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCallbackProtocol.swift; sourceTree = "<group>"; };
 		1612FDA9242DAC5F00D4DB9E /* CallbackProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackProtocol.swift; sourceTree = "<group>"; };
 		16418C10242DBB01000EAD1C /* IndividualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTableViewCell.swift; sourceTree = "<group>"; };
+		16E4EC4124339A1E0020A878 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		16E4EC432433A0920020A878 /* IndividualEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndividualEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		16E4EC442433A0920020A878 /* IndividualEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndividualEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		1612FD9F242DA2C600D4DB9E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				16E4EC40243399F50020A878 /* CoreData */,
 				1612FDA3242DA3B100D4DB9E /* Model */,
 				1612FD9B242DA2C100D4DB9E /* HttpCaller.swift */,
 				1612FD9C242DA2C100D4DB9E /* JSONParser.swift */,
@@ -159,6 +166,16 @@
 				16418C10242DBB01000EAD1C /* IndividualTableViewCell.swift */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		16E4EC40243399F50020A878 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				16E4EC432433A0920020A878 /* IndividualEntity+CoreDataClass.swift */,
+				16E4EC442433A0920020A878 /* IndividualEntity+CoreDataProperties.swift */,
+				16E4EC4124339A1E0020A878 /* PersistenceService.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,12 +254,15 @@
 				1612FDAA242DAC5F00D4DB9E /* ImageCallbackProtocol.swift in Sources */,
 				1612FD9E242DA2C100D4DB9E /* JSONParser.swift in Sources */,
 				1612FDA5242DA3E000D4DB9E /* Individual.swift in Sources */,
+				16E4EC462433A0920020A878 /* IndividualEntity+CoreDataProperties.swift in Sources */,
 				1612FD9D242DA2C100D4DB9E /* HttpCaller.swift in Sources */,
 				1612FD85242D9F6900D4DB9E /* DetailViewController.swift in Sources */,
+				16E4EC4224339A1E0020A878 /* PersistenceService.swift in Sources */,
 				1612FD7F242D9F6900D4DB9E /* LDSMobileAppChallenge.xcdatamodeld in Sources */,
 				1612FDAB242DAC5F00D4DB9E /* CallbackProtocol.swift in Sources */,
 				16418C11242DBB01000EAD1C /* IndividualTableViewCell.swift in Sources */,
 				1612FD81242D9F6900D4DB9E /* SceneDelegate.swift in Sources */,
+				16E4EC452433A0920020A878 /* IndividualEntity+CoreDataClass.swift in Sources */,
 				1612FDA7242DA49400D4DB9E /* Affiliation.swift in Sources */,
 				1612FDA2242DA33200D4DB9E /* Constants.swift in Sources */,
 			);
