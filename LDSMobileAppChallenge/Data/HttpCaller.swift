@@ -65,7 +65,6 @@ class HttpCaller {
         task.resume()
     }
     
-    // TODO: Refactor to call this web service directly from the Collection View Cell to avoid over-engineering. Whoops. ;-)
     func getImageResponse(for id : Int) {
         session.dataTask(with: self.urlRequest as URLRequest, completionHandler: { (data, response, error) in
             guard let rawData = data, let _:URLResponse = response, error == nil else { return }
