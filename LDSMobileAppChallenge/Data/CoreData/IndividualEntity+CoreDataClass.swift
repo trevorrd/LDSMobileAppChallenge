@@ -11,6 +11,4 @@ import Foundation
 import CoreData
 
 @objc(IndividualEntity)
-public class IndividualEntity: NSManagedObject {
-
-}
+public class IndividualEntity: NSManagedObject {}

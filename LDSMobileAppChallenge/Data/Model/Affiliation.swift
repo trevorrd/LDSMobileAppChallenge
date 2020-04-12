@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Affilition : String, Codable {
+enum Affiliation : String, Codable {
     case JEDI
     case RESISTANCE
     case FIRST_ORDER

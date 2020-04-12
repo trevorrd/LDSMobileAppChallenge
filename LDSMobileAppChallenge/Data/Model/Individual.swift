@@ -9,13 +9,24 @@
 import Foundation
 
 class Individual : Decodable {
-    let id : Int
-    let firstName : String
-    let lastName : String
-    let birthdate : String
-    let profilePicture : String
-    let forceSensitive : Bool
-    let affiliation : Affilition
+    var id : Int
+    var firstName : String
+    var lastName : String
+    var birthdate : String
+    var profilePicture : String
+    var forceSensitive : Bool
+    var affiliation : Affiliation
     
     var profileImage : Data?
+    
+    init(id: Int, firstName : String, lastName : String, birthdate : String, profilePicture : String, forceSensitive : Bool, affiliation : Affiliation) {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.birthdate = birthdate
+        self.profilePicture = profilePicture
+        self.forceSensitive = forceSensitive
+        self.affiliation = affiliation
+    }
+    
 }

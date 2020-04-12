@@ -17,12 +17,12 @@ extension IndividualEntity {
         return NSFetchRequest<IndividualEntity>(entityName: "IndividualEntity")
     }
 
+    @NSManaged public var id: Int32?
     @NSManaged public var affiliation: String?
     @NSManaged public var birthdate: String?
     @NSManaged public var firstName: String?
     @NSManaged public var lastName: String?
     @NSManaged public var forceSensitive: Bool
-    @NSManaged public var id: Int32
     @NSManaged public var profilePicture: String?
     @NSManaged public var profileImage: Data?
 
